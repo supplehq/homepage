@@ -1,8 +1,12 @@
 @import "~bulma/sass/utilities/initial-variables"
 
 // Config vars
-$kaldi-red: #FD461E
-$kaldi-red-invert: #fff
+$kaldi-red: #3EC4DF
+// $kaldi-red-invert: #0E3043 // #fff
+$kaldi-red-invert: #FFFFFF
+
+// $kaldi-red: #0E3043
+// $kaldi-red-invert: #3EC4DF
 
 $primary: $kaldi-red
 $primary-invert: $kaldi-red-invert
@@ -20,8 +24,22 @@ $primary-invert: $kaldi-red-invert
   display: flex
   justify-content: center
   align-items: center
+  z-index: 0
 
 .margin-top-0
   margin-top: 0 !important
 
 @import "~bulma"
+@import "~typeface-nanum-square/nanumsquare.css"
+
+// #fff
+// html, body
+//   background: #3ec4df
+//   color: white
+
+body
+  font-family: Nanum Square, sans-serif
+  // background: #3EC4DF
+
+.has-bg-primary
+  background: $kaldi-red

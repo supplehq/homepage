@@ -5,8 +5,16 @@ const FeatureGrid = ({ gridItems }) => (
     {gridItems.map(item => (
       <div key={item.image} className="column is-6">
         <section className="section">
-          <p className="has-text-centered">
-            <img alt="" src={item.image} />
+          <figure class="image is-4by">
+            <div style={{
+              background: 'no-repeat center',
+              backgroundImage: `url(${item.image})`,
+              backgroundSize: 'auto 100%',
+              height: 300,
+            }}></div>
+          </figure>
+          <p>
+            <h4>{item.title}</h4>
           </p>
           <p>{item.text}</p>
         </section>

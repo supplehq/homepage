@@ -1,8 +1,10 @@
 import React from 'react'
+import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import Content, { HTMLContent } from '../components/Content'
 
-export const BlogPostTemplate = ({
+export const CareerPostTemplate = ({
+  careersURL,
   content,
   contentComponent,
   description,
@@ -17,11 +19,13 @@ export const BlogPostTemplate = ({
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
+            <Link className="button is-smll is-primary" to={careersURL}>
+              채용 홈페이지로
+            </Link>
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
-            <p>{description}</p>
-            <PostContent content={content} />
+            <PostContent className="content" content={content} />
           </div>
         </div>
       </div>
@@ -29,22 +33,30 @@ export const BlogPostTemplate = ({
   )
 }
 
-export default props => {
-  const { markdownRemark: post } = props.data
+export default ({ data }) => {
+  const { common, markdownRemark: post } = data
 
   return (
-    <BlogPostTemplate
-      content={post.html}
+    <CareerPostTemplate
+      careersURL={common.fields.slug}
+      content={[post.html, common.html].join('\n')}
       contentComponent={HTMLContent}
       description={post.frontmatter.description}
-      helmet={<Helmet title={`Blog | ${post.frontmatter.title}`} />}
+      helmet={<Helmet title={`Careers | ${post.frontmatter.title}`} />}
       title={post.frontmatter.title}
     />
   )
 }
 
 export const pageQuery = graphql`
-  query BlogPostByID($id: String!) {
+  query CareerPostByID($id: String!) {
+    common: markdownRemark(frontmatter: { templateKey: { eq: "careers-page" } }) {
+      id
+      html
+      fields {
+        slug
+      }
+    }
     markdownRemark(id: { eq: $id }) {
       id
       html
