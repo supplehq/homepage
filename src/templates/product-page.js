@@ -20,7 +20,16 @@ export const ProductPageTemplate = ({
       <div className="columns">
         <div className="column is-10 is-offset-1">
           <div className="content">
-            <TextHero bgImage={image} opacity={0.6}>
+            <TextHero
+              style={{
+                background: '#3EC4DF47',
+              }}
+              bgStyle={{
+                opacity: 0.35,
+                filter: 'blur(1px)',
+              }}
+              bgImage={image}
+            >
               {title}
             </TextHero>
             <div className="columns">
