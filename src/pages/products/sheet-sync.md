@@ -18,9 +18,10 @@ intro:
       text: >
         REST API와 다양한 데이터베이스 및 외부 서비스를 지원합니다.
 testimonials:
-  - author: Elisabeth Kaurismäki
+  - author: 조성현, Spacewalk CEO
+    image: /img/josh.jpg
     quote: >-
-      The first time I tried Kaldi’s coffee, I couldn’t even believe that was
-      the same thing I’ve been drinking every morning.
+      스페이스워크의 고객들은 sheet sync 를 통해 우리가 제공하는 데이터를 커스텀하게 조직할 수 있게 되었습니다. 
+      덕분에 우리는 핵심기술에만 집중할 수 있게 되었습니다.
 ---
 

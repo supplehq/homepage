@@ -30,7 +30,7 @@ export const CareersPageTemplate = ({
             <h3 className="has-text-weight-semibold is-size-2">
               {section1.heading}
             </h3>
-            <p>{section1.description}</p>
+            <p className="desc">{section1.description}</p>
 
             <h3 className="has-text-weight-semibold is-size-2">
               {section2.heading}
@@ -45,7 +45,7 @@ export const CareersPageTemplate = ({
               </div>
             </div>
 
-            <p>{section2.description}</p>
+            <p className="desc">{section2.description}</p>
 
             <h1 className="has-text-weight-bold is-size-2">
               진행 중인 채용 공고

@@ -37,7 +37,7 @@ export const ProductPageTemplate = ({
                 <h3 className="has-text-weight-semibold is-size-2">
                   {heading}
                 </h3>
-                <p>{description}</p>
+                <p className="desc">{description}</p>
               </div>
             </div>
             <Features gridItems={intro.blurbs} />
@@ -84,6 +84,7 @@ export const productPageQuery = graphql`
         }
         testimonials {
           author
+          image
           quote
         }
       }
