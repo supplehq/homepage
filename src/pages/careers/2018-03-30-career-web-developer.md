@@ -33,7 +33,7 @@ description: Full stack 웹 개발자를 모십니다.
 ## 우대사항
 
 - Server-side web application 개발 경험
-  - REST API 구현 경험
+  - REST API, GraphQL 구현 경험
   - DevOps 경험
 - Client-side web application 개발 경험
   - UI library or framework 관련 경험 (ex. Angular, React, or Vue.js)
