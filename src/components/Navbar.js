@@ -47,9 +47,9 @@ const Navbar = ({ products }) => (
         <Link className="navbar-item" to="/careers">
           채용
         </Link>
-        {/* <a className="navbar-item" href="https://medium.com/supple" target="_blank">
+        <a className="navbar-item" href="https://medium.com/supple" target="_blank">
           블로그
-        </a> */}
+        </a>
       </div>
       <div className="navbar-end">
       </div>

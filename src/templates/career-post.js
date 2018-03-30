@@ -42,7 +42,16 @@ export default ({ data }) => {
       content={[post.html, common.html].join('\n')}
       contentComponent={HTMLContent}
       description={post.frontmatter.description}
-      helmet={<Helmet title={`Careers | ${post.frontmatter.title}`} />}
+      helmet={
+        <Helmet 
+          title={`Careers | ${post.frontmatter.title}`} 
+          meta={[
+            { property: 'og:title', content: post.frontmatter.title },
+            { property: 'og:type', content: "website" },
+            { property: 'og:description', content: post.frontmatter.description },
+          ]}
+        />
+      }
       title={post.frontmatter.title}
     />
   )
