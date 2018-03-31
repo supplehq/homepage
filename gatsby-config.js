@@ -35,8 +35,6 @@ module.exports = {
       options: {
         trackingId: process.env.SUPPLE_GA_TRACKING_ID,
         head: false,
-        anonymize: true,
-        respectDNT: true,
       },
     },
   ],
