@@ -30,5 +30,14 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.SUPPLE_GA_TRACKING_ID,
+        head: false,
+        anonymize: true,
+        respectDNT: true,
+      },
+    },
   ],
 }
